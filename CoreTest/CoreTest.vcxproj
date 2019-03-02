@@ -15,7 +15,7 @@
     <ClInclude Include="include\targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\CoreTest.cpp" />
+    <ClCompile Include="src\Network\ParsetTest.cpp" />
     <ClCompile Include="src\stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>

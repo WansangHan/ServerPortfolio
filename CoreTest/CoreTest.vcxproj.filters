@@ -17,11 +17,9 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\CoreTest.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
     <ClCompile Include="src\stdafx.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="src\Network\ParsetTest.cpp" />
   </ItemGroup>
 </Project>
