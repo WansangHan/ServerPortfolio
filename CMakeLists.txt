@@ -9,6 +9,8 @@ set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/lib)
 
 find_package(Boost REQUIRED COMPONENTS system)
 
+include_directories(${CMAKE_SOURCE_DIR}/Vendor)
+
 file(GLOB_RECURSE CORE_CPP_FILES ${PROJECT_SOURCE_DIR}/Core/src/*.cpp)
 add_library(Core ${CORE_CPP_FILES})
 target_link_libraries(Core ${Boost_LIBRARIES})
