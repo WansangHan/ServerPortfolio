@@ -79,6 +79,9 @@
       <AdditionalLibraryDirectories>$(SolutionDir)lib\Debug;C:\boost_1_69_0\stage\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>Core.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command>$(SolutionDir)bin\Debug\CoreTest.exe</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -101,6 +104,9 @@
       <AdditionalLibraryDirectories>$(SolutionDir)lib\Release;C:\boost_1_69_0\stage\lib</AdditionalLibraryDirectories>
       <AdditionalDependencies>Core.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command>$(SolutionDir)bin\Release\CoreTest.exe</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
