@@ -15,12 +15,18 @@
     <ClInclude Include="include\targetver.h">
       <Filter>include</Filter>
     </ClInclude>
+    <ClInclude Include="include\Network\Server.h" />
+    <ClInclude Include="include\Network\Connection.h" />
     <ClInclude Include="include\Network\Parser.h" />
+    <ClInclude Include="include\Network\Client.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\stdafx.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="src\Network\Server.cpp" />
+    <ClCompile Include="src\Network\Connection.cpp" />
     <ClCompile Include="src\Network\Parser.cpp" />
+    <ClCompile Include="src\Network\Client.cpp" />
   </ItemGroup>
 </Project>
