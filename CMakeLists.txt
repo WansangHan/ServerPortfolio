@@ -13,7 +13,7 @@ include_directories(${CMAKE_SOURCE_DIR}/Vendor)
 
 file(GLOB_RECURSE CORE_CPP_FILES ${PROJECT_SOURCE_DIR}/Core/src/*.cpp)
 add_library(Core ${CORE_CPP_FILES})
-target_link_libraries(Core ${Boost_LIBRARIES})
+target_link_libraries(Core ${Boost_LIBRARIES} -lpthread)
 target_include_directories(Core PRIVATE
   ${PROJECT_SOURCE_DIR}/Core/include
 )
