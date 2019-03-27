@@ -27,11 +27,8 @@ build
 *.lai
 *.la
 *.a
-*.lib
 
 # Executables
-*.exe
-*.out
 *.app
 
 ## Ignore Visual Studio temporary files, build results, and
@@ -375,3 +372,6 @@ cmake_install.cmake
 install_manifest.txt
 compile_commands.json
 CTestTestfile.cmake
+
+# User
+Core/include/FbIdl/packet_generated.h

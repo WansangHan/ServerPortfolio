@@ -2,6 +2,8 @@ cmake_minimum_required (VERSION 3.5)
 
 project(ServerPortfolio C CXX)
 
+execute_process(COMMAND bash -c " ${CMAKE_SOURCE_DIR}/Vendor/flatbuffer/out/flatc --cpp -o ${CMAKE_SOURCE_DIR}/Core/include/FbIdl/ ${CMAKE_SOURCE_DIR}/Core/include/FbIdl/packet.fbs")
+
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17")
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin)
@@ -9,7 +11,10 @@ set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/lib)
 
 find_package(Boost REQUIRED COMPONENTS system)
 
-include_directories(${CMAKE_SOURCE_DIR}/Vendor)
+include_directories(
+	${CMAKE_SOURCE_DIR}/Vendor/spdlog/include
+	${CMAKE_SOURCE_DIR}/Vendor/flatbuffer/include
+)
 
 file(GLOB_RECURSE CORE_CPP_FILES ${PROJECT_SOURCE_DIR}/Core/src/*.cpp)
 add_library(Core ${CORE_CPP_FILES})
